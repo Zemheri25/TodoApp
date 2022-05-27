@@ -1,0 +1,17 @@
+{% extends 'Todo/base.html' %}
+
+
+{% block container %}
+
+    <h1>This is Detail Page</h1>
+
+    <div>
+        <h3>Title : {{todo.title}}</h3>
+        <h3>Description : {{todo.description}}</h3>
+        <h3>Created Date : {{todo.created_date}}</h3>
+        <a href="{% url 'delete' todo.id %}">Delete</a>
+        <a href="{% url 'update' todo.id %}">Update</a>
+    </div>
+    
+{% endblock container %}
+    
